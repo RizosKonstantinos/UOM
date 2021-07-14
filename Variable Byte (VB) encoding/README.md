@@ -29,6 +29,6 @@ is the last byte that stores the integer or whether another byte follows.It is s
 byte code, we read a sequence of bytes with continuation bit 0 terminated by a byte with continuation bit 1. We then extract and concatenate the 7-bit parts.
 
 Suppose we want to store the number (gap) ```214577```. In binary, it’d be represented as ```110100011000110001```. With the variable byte scheme, we take the first 
-(lowest) seven bits (```0110001```) and add the coninuation bit 1 in the beginning, and we get ```1011000```. We then take the next 7 bits (```0001100```) and add the
+(lowest) seven bits (```0110001```) and add the coninuation bit 1 in the beginning, and we get ```10110001```. We then take the next 7 bits (```0001100```) and add the
 coninuation bit 0 in the beginning, and we get ```00001100```. We then take the remaining four bits of the binary value (1101), pad it out to be seven bits, and add the 
 coninuation bit 0 in the beginning.So, all up, we’ve got ```000011010000110010110001```
